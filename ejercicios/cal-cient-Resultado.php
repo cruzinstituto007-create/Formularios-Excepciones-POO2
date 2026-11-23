@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora científica</title>
+</head>
+<body>
+    <?php require_once __DIR__ . "/../menu.php"; ?>
+
+    <h1>Calculadora científica</h1>
+
+    <form method="post" action="">
+        <label>Número 1:</label>
+        <input type="number" step="any" name="num1" required>
+        <br><br>
+        <label>Número 2:</label>
+        <input type="number" step="any" name="num2" required>
+        <br><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <br>
+
+    <?php
+    require_once __DIR__ . "/calculadora-extend.php";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $num1 = (float)$_POST["num1"];
+        $num2 = (float)$_POST["num2"];
+
+        try {
+            $calc = new CalculadoraCientifica($num1, $num2);
+            echo "Suma: " . $calc->sumar() . "<br>";
+            echo "Resta: " . $calc->restar() . "<br>";
+            echo "Multiplicación: " . $calc->multiplicar() . "<br>";
+            echo "División: " . $calc->dividir() . "<br>";
+            echo "Cuadrado del número 1: " . $calc->cuadrado() . "<br>";
+            echo "Raíz del número 1: " . $calc->raiz() . "<br>";
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+    ?>
+</body>
+</html>
