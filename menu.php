@@ -7,7 +7,7 @@ echo "<p>Usuario actual: <b>" . $usuarioActual . "</b> | ";
 if ($usuarioActual == "invitado") {
     echo '<a href="/login.php">Ir a login</a>';
 } else {
-    echo '<a href="/cambiar-contraseña.php">Cambiar contraseña</a> | ';
+    echo '<a href="/cambiar-password.php">Cambiar contraseña</a> | ';
     echo '<a href="/logout.php">Cerrar sesión</a>';
 }
 echo "</p>";
