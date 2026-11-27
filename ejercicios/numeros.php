@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Numeros</title>
+    <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
     <?php require "../menu.php"; ?>

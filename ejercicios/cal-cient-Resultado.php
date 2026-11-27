@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculadora científica</title>
+    <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
     <?php require_once __DIR__ . "/../menu.php"; ?>

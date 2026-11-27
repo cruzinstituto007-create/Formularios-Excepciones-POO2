@@ -22,5 +22,5 @@ if ($usuarioActual == "Admin") {
     echo ' | <a href="/ver-log.php">Ver log (Admin)</a>';
 }
 
-echo "<hr>";
+echo "</ul></nav>";
 ?>

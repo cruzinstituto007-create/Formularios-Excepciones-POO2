@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MAYOR DE EDAD</title>
+    <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
     <?php require "../menu.php"; ?>
